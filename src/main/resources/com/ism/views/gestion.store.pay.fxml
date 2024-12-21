@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="container" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.implement.PaiementView">
+   <children>
+      <Pane layoutX="19.0" layoutY="20.0" prefHeight="510.0" prefWidth="760.0" stylesheets="@../styles/base.css">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="radius" />
+         </styleClass>
+         <children>
+            <TableView fx:id="payTable" layoutX="310.0" layoutY="49.0" prefHeight="437.0" prefWidth="430.0" styleClass="arial" stylesheets="@../styles/base.css">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="30.0" text="#" />
+                  <TableColumn fx:id="clientCol" prefWidth="176.5" text="Client" />
+                  <TableColumn fx:id="montantPayCol" prefWidth="172.0" text="Montant Payé" />
+                  <TableColumn fx:id="montantRestantCol" prefWidth="122.5" text="Montant Restant" />
+                  <TableColumn fx:id="montantTotalCol" prefWidth="142.5" text="Montant Total" />
+               </columns>
+            </TableView>
+            <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Créer un paiement pour un client" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="311.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Liste des paiements" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="17.0" layoutY="48.0" styleClass="text" stylesheets="@../styles/base.css" text="Client" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboClient" layoutX="16.0" layoutY="73.0" onAction="#loadDette" prefHeight="30.0" prefWidth="270.0" promptText="Selectionner un client" stylesheets="@../styles/base.css">
+               <styleClass>
+                  <String fx:value="arial" />
+                  <String fx:value="text" />
+               </styleClass>
+            </ComboBox>
+            <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="113.0" styleClass="text" stylesheets="@../styles/base.css" text="Dette" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboDette" layoutX="17.0" layoutY="138.0" prefHeight="30.0" prefWidth="270.0" promptText="Selectionner une dette" stylesheets="@../styles/base.css">
+               <styleClass>
+                  <String fx:value="arial" />
+                  <String fx:value="text" />
+               </styleClass>
+            </ComboBox>
+            <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="177.0" styleClass="text" stylesheets="@../styles/base.css" text="Montant Payé" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="montantPayField" layoutX="17.0" layoutY="202.0" prefHeight="30.0" prefWidth="270.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSave" layoutX="17.0" layoutY="243.0" mnemonicParsing="false" onAction="#addNewPay" styleClass="btn-light" stylesheets="@../styles/base.css" text="Valider" />
+            <Button fx:id="btnCancel" layoutX="198.0" layoutY="243.0" mnemonicParsing="false" onAction="#resetFormPay" styleClass="btn-outline" stylesheets="@../styles/base.css" text="Annuler" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

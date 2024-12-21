@@ -1,0 +1,5 @@
+@import url(style.css);
+
+.container {
+    -fx-background-color: var(--first);
+}

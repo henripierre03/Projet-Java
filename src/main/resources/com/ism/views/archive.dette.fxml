@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="container" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.implement.DetteView">
+   <children>
+      <Pane layoutX="19.0" layoutY="20.0" prefHeight="510.0" prefWidth="760.0" stylesheets="@../styles/base.css">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="radius" />
+         </styleClass>
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="18.0" styleClass="text" stylesheets="@../styles/base.css" text="Liste des dettes soldées" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnArchive" contentDisplay="RIGHT" layoutX="630.0" layoutY="453.0" mnemonicParsing="false" onAction="#update" stylesheets="@../styles/base.css" text="Desarchiver">
+               <styleClass>
+                  <String fx:value="btn-light" />
+                  <String fx:value="arial" />
+               </styleClass></Button>
+            <TableView fx:id="detteTable" layoutX="20.0" layoutY="44.0" onMouseClicked="#tableClicked" prefHeight="400.0" prefWidth="720.0" styleClass="arial" stylesheets="@../styles/base.css">
+               <columns>
+                  <TableColumn fx:id="idDetteCol" prefWidth="30.0" text="#" />
+                  <TableColumn fx:id="clientDetteCol" prefWidth="138.0" text="Client" />
+                  <TableColumn fx:id="montantTotalDetteCol" prefWidth="138.0" text="Montant Total" />
+                  <TableColumn fx:id="montantVerserDetteCol" prefWidth="138.0" text="Montant Verser" />
+                  <TableColumn fx:id="montantRestantDetteCol" prefWidth="138.0" text="Montant Restant" />
+                  <TableColumn fx:id="etatDetteCol" prefWidth="138.0" text="État" />
+                  <TableColumn fx:id="stateDetteCol" prefWidth="138.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

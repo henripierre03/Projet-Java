@@ -1,0 +1,96 @@
+.container {
+    -fx-background-color: #003049;
+}
+
+.bg {
+    -fx-background-color: #F9FAFC;
+}
+
+.radius {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.text {
+    -fx-text-fill: #003049;
+}
+
+.btn {
+    -fx-background-color: #F9FAFC;
+    -fx-text-fill: #003049;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-background-radius: 5px;
+}
+
+.arial {
+    -fx-font-family: Arial;
+}
+
+.btn-light {
+    -fx-padding: 10 20;
+    -fx-background-color: #003049;
+    -fx-text-fill: #F9FAFC;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-background-radius: 5px;
+}
+
+.btn-outline {
+    -fx-padding: 10 20;
+    -fx-background-color: #F9FAFC;
+    -fx-text-fill: #003049;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-border-color: #003049;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+}
+
+.btn-small-light {
+    -fx-padding: 3 8;
+    -fx-background-color: #003049;
+    -fx-text-fill: #F9FAFC;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-background-radius: 5px;
+}
+
+.btn-small-remove {
+    -fx-padding: 3 8;
+    -fx-background-color: #BC4749;
+    -fx-text-fill: #F9FAFC;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-background-radius: 5px;
+}
+
+.custom-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.custom-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.custom-scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 2;
+}
+
+.custom-scroll-pane > .scroll-bar:vertical > .thumb {
+    -fx-background-color: #555;
+    -fx-background-radius: 3;
+}
+
+.custom-scroll-pane > .scroll-bar:vertical > .track {
+    -fx-background-color: transparent;
+}
+
+.custom-scroll-pane > .scroll-bar > .increment-button,
+.custom-scroll-pane > .scroll-bar > .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}

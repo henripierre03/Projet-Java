@@ -1,0 +1,10 @@
+persistence: "dette_postgres"
+repository:
+  article: ArticleRepository
+  client: ClientRepository
+  demandeArticle: DemandeArticleRepository
+  demandeDette: DemandeDetteRepository
+  detail: DetailRepository
+  dette: DetteRepository
+  paiement: PaiementRepository
+  user: UserRepository

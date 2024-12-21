@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="800.0" styleClass="container" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.implement.ClientView">
+   <children>
+      <Pane layoutX="19.0" layoutY="20.0" prefHeight="540.0" prefWidth="760.0" stylesheets="@../styles/base.css">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="radius" />
+         </styleClass>
+         <children>
+            <TableView fx:id="clientTable" layoutX="290.0" layoutY="87.0" prefHeight="430.0" prefWidth="450.0" styleClass="arial" stylesheets="@../styles/base.css">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="30.0" text="#" />
+                  <TableColumn fx:id="surnameCol" prefWidth="129.63516235351562" text="Surname" />
+                  <TableColumn fx:id="telCol" prefWidth="122.5" text="Tel" />
+                  <TableColumn fx:id="addressCol" prefWidth="142.5" text="Adresse" />
+                  <TableColumn fx:id="duCol" prefWidth="218.5" text="Cumul Montant Dû" />
+                  <TableColumn fx:id="stateCol" prefWidth="50.0" text="Status" />
+               </columns>
+            </TableView>
+            <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Créer un client" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="290.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Liste des clients" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="46.0" styleClass="text" stylesheets="@../styles/base.css" text="Surname" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surnameField" layoutX="18.0" layoutY="70.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="109.0" styleClass="text" stylesheets="@../styles/base.css" text="Tel" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="telField" layoutX="18.0" layoutY="134.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="174.0" styleClass="text" stylesheets="@../styles/base.css" text="Adresse" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addressField" layoutX="18.0" layoutY="199.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="createAccountCheckbox" layoutX="19.0" layoutY="238.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#handleCreateAccount" stylesheets="@../styles/base.css" text="Voulez-vous ajouter un compte utilisateur">
+               <styleClass>
+                  <String fx:value="arial" />
+                  <String fx:value="text" />
+               </styleClass>
+            </CheckBox>
+            <Pane fx:id="accountFieldsContainer" layoutY="255.0" prefHeight="204.0" prefWidth="291.0" visible="false">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="21.0" layoutY="8.0" styleClass="text" stylesheets="@../styles/base.css" text="Login" textFill="#f9fafc">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginField" layoutX="21.0" layoutY="32.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="TOP_LEFT" layoutX="21.0" layoutY="72.0" styleClass="text" stylesheets="@../styles/base.css" text="Email" textFill="#f9fafc">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailField" layoutX="21.0" layoutY="97.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="TOP_LEFT" layoutX="21.0" layoutY="137.0" styleClass="text" stylesheets="@../styles/base.css" text="Password" textFill="#f9fafc">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" layoutX="21.0" layoutY="162.0" prefHeight="30.0" prefWidth="250.0" styleClass="arial" stylesheets="@../styles/base.css" />
+               </children>
+            </Pane>
+            <Button fx:id="btnSave" layoutX="20.0" layoutY="266.0" mnemonicParsing="false" onAction="#addCustomer" styleClass="btn-light" stylesheets="@../styles/base.css" text="Valider" />
+            <Button fx:id="btnCancel" layoutX="179.0" layoutY="266.0" mnemonicParsing="false" onAction="#reset" styleClass="btn-outline" stylesheets="@../styles/base.css" text="Annuler" />
+            <TextField fx:id="searchField" layoutX="489.0" layoutY="46.0" onKeyReleased="#handleSearch" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_LEFT" layoutX="406.0" layoutY="53.0" styleClass="text" stylesheets="@../styles/base.css" text="Rechercher" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

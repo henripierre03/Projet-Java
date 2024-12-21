@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="container" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.implement.ArticleView">
+   <children>
+      <Pane layoutX="19.0" layoutY="20.0" prefHeight="510.0" prefWidth="760.0" stylesheets="@../styles/base.css">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="radius" />
+         </styleClass>
+         <children>
+            <TableView fx:id="articleTable" layoutX="290.0" layoutY="52.0" onMouseClicked="#tableClicked" prefHeight="350.0" prefWidth="450.0" styleClass="arial" stylesheets="@../styles/base.css">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="30.0" text="#" />
+                  <TableColumn fx:id="libelleCol" prefWidth="129.63516235351562" text="Libelle" />
+                  <TableColumn fx:id="prixCol" prefWidth="94.04461669921875" text="Prix" />
+                  <TableColumn fx:id="qteStockCol" prefWidth="194.5" text="Qte Stock" />
+                  <TableColumn fx:id="dateCol" prefWidth="-1.0" text="Date Création" />
+               </columns>
+            </TableView>
+            <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Créer un article" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="63.0" styleClass="text" stylesheets="@../styles/base.css" text="Libelle" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="libelleField" layoutX="19.0" layoutY="87.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="127.0" styleClass="text" stylesheets="@../styles/base.css" text="Prix" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prixField" layoutX="19.0" layoutY="151.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="193.0" styleClass="text" stylesheets="@../styles/base.css" text="Qte Stock" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="qteStockField" layoutX="19.0" layoutY="217.0" prefHeight="30.0" prefWidth="250.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSave" layoutX="21.0" layoutY="257.0" mnemonicParsing="false" onAction="#addArticle" styleClass="btn-light" stylesheets="@../styles/base.css" text="Valider" />
+            <Button fx:id="btnCancel" layoutX="174.0" layoutY="257.0" mnemonicParsing="false" onAction="#reset" styleClass="btn-outline" stylesheets="@../styles/base.css" text="Annuler" />
+            <Label alignment="TOP_LEFT" layoutX="290.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Liste des articles disponibles" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnUpdate" layoutX="633.0" layoutY="411.0" mnemonicParsing="false" onAction="#update" styleClass="btn-outline" stylesheets="@../styles/base.css" text="Mise à jour" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

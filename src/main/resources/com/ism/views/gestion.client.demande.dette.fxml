@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="container" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.implement.DemandeDetteView">
+   <children>
+      <Pane layoutX="19.0" layoutY="20.0" prefHeight="510.0" prefWidth="760.0" stylesheets="@../styles/base.css">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="radius" />
+         </styleClass>
+         <children>
+            <TableView fx:id="askDebtTable" layoutX="310.0" layoutY="49.0" prefHeight="437.0" prefWidth="430.0" styleClass="arial" stylesheets="@../styles/base.css">
+               <columns>
+                  <TableColumn fx:id="idAskCol" prefWidth="30.0" text="#" />
+                  <TableColumn fx:id="montantAskCol" prefWidth="129.63516235351562" text="Montant Total" />
+                  <TableColumn fx:id="articleAskCol" prefWidth="204.5" text="Articles (Qte)" />
+                  <TableColumn fx:id="stateAskCol" minWidth="0.0" text="État" />
+               </columns>
+            </TableView>
+            <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Créer une demande de dette pour un client" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="311.0" layoutY="20.0" styleClass="text" stylesheets="@../styles/base.css" text="Liste des demandes de dette" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="17.0" layoutY="63.0" styleClass="text" stylesheets="@../styles/base.css" text="Montant Total" textFill="#f9fafc">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="montantField" layoutX="16.0" layoutY="88.0" prefHeight="30.0" prefWidth="270.0" styleClass="text" stylesheets="@../styles/base.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Pane fx:id="rowsContainer" layoutY="118.0" prefHeight="65.0" prefWidth="310.0">
+               <children>
+                  <Label fx:id="ArticleLabel" alignment="TOP_LEFT" layoutX="17.0" layoutY="4.0" styleClass="text" stylesheets="@../styles/base.css" text="Article" textFill="#f9fafc">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="qteLabel" alignment="TOP_LEFT" layoutX="170.0" layoutY="4.0" styleClass="text" stylesheets="@../styles/base.css" text="Qte" textFill="#f9fafc">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="16.0" layoutY="26.0" prefHeight="30.0" prefWidth="270.0" spacing="5.0">
+                     <children>
+                        <ComboBox fx:id="comboArticle" prefHeight="30.0" prefWidth="150.0" promptText="..." stylesheets="@../styles/base.css">
+                           <styleClass>
+                              <String fx:value="arial" />
+                              <String fx:value="text" />
+                           </styleClass>
+                        </ComboBox>
+                        <TextField fx:id="qteArticle" prefHeight="30.0" prefWidth="50.0" styleClass="text" stylesheets="@../styles/base.css">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnArticle" mnemonicParsing="false" onAction="#ajouterLigne" prefHeight="29.0" prefWidth="29.0" styleClass="btn-small-light" stylesheets="@../styles/base.css" text="⬇" />
+                        <Button fx:id="btnRemove" mnemonicParsing="false" prefHeight="29.0" prefWidth="28.0" styleClass="btn-small-remove" stylesheets="@../styles/base.css" text="Ⅹ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Button fx:id="btnSave" layoutX="17.0" layoutY="186.0" mnemonicParsing="false" onAction="#addNewAskDette" styleClass="btn-light" stylesheets="@../styles/base.css" text="Valider" />
+            <Button fx:id="btnCancel" layoutX="198.0" layoutY="186.0" mnemonicParsing="false" onAction="#resetFormDette" styleClass="btn-outline" stylesheets="@../styles/base.css" text="Annuler" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

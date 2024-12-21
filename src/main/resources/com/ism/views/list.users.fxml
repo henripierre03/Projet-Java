@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="container" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.implement.UserView">
+   <children>
+      <Pane layoutX="19.0" layoutY="20.0" prefHeight="510.0" prefWidth="760.0" stylesheets="@../styles/base.css">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="radius" />
+         </styleClass>
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="45.0" styleClass="text" stylesheets="@../styles/base.css" text="Liste des comptes utilisateurs" textFill="#f9fafc" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboAllRole" layoutX="420.0" layoutY="38.0" prefHeight="30.0" prefWidth="250.0" promptText="Filtrer par rôle" stylesheets="@../styles/base.css">
+               <styleClass>
+                  <String fx:value="arial" />
+                  <String fx:value="text" />
+               </styleClass>
+            </ComboBox>
+            <Button fx:id="btnSearch" layoutX="682.0" layoutY="35.0" mnemonicParsing="false" onAction="#search" stylesheets="@../styles/base.css" text="🔍">
+               <styleClass>
+                  <String fx:value="btn-light" />
+                  <String fx:value="arial" />
+               </styleClass></Button>
+            <TableView fx:id="userAllTable" layoutX="20.0" layoutY="92.0" prefHeight="400.0" prefWidth="720.0" styleClass="arial" stylesheets="@../styles/base.css">
+               <columns>
+                  <TableColumn fx:id="idAllCol" prefWidth="30.0" text="#" />
+                  <TableColumn fx:id="emailAllCol" prefWidth="138.0" text="Email" />
+                  <TableColumn fx:id="loginAllCol" prefWidth="138.0" text="Login" />
+                  <TableColumn fx:id="passwordAllCol" prefWidth="138.0" text="Password" />
+                  <TableColumn fx:id="roleAllCol" prefWidth="138.0" text="Rôle" />
+                  <TableColumn fx:id="stateAllCol" prefWidth="138.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
